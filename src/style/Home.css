@@ -1,0 +1,22 @@
+.banner{
+	width: 100%;
+	height: 1rem;
+	background: #ff0;
+	border-bottom: 1px solid #ebcbcb;
+}
+.banner Carousel{
+	width: 100%;
+	height: 1rem;
+}
+.kinds{
+	width: 100%;
+	height: 1.34rem;
+	background: #f00;
+	border-bottom: 1px solid #f6f6f6;
+	margin-bottom: 0.1rem;
+}
+.has_area{
+	width: 100%;
+	height: 1.3rem;
+	background: skyblue;
+}

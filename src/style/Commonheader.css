@@ -1,0 +1,30 @@
+.head{
+	width: 100%;
+	height: 0.4rem;
+	background: #282828;
+	display: flex;
+}
+.head .meau{
+	width: 0.45rem;
+	line-height: 0.4rem;
+	color: #888;
+	border-right: 1px solid #323232;
+}
+.head .meau i{
+	display: block;
+	text-align: center;
+}
+.head .title{
+	width: 65%;
+	padding-left: 0.1rem;
+	line-height: 0.4rem;
+	color: #fff;
+}
+.head .mine{
+	width: 20%;
+	line-height: 0.4rem;
+	text-align: right;
+	color: #888;
+	font-weight: bold;
+}
+

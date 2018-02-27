@@ -1,0 +1,26 @@
+.foot{
+	width: 100%;
+	height: 0.35rem;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.foot ul{
+	display: flex;
+	padding-top: 0.05rem;
+}
+
+.foot ul li{
+	flex: 1;
+	padding-left: 0.3rem;
+}
+.foot ul li .selected{
+	color: red;
+}
+.foot ul li i{
+	display: block;
+	padding-left: 0.02rem;
+}
+.foot ul li .selected h4{
+	
+}
