@@ -1,22 +1,165 @@
 .banner{
 	width: 100%;
-	height: 1rem;
-	background: #ff0;
+	height: 0.68rem;
 	border-bottom: 1px solid #ebcbcb;
 }
-.banner Carousel{
+.banner img{
+	height: 0.68rem;
 	width: 100%;
-	height: 1rem;
 }
 .kinds{
-	width: 100%;
 	height: 1.34rem;
-	background: #f00;
+	background: #fff;
 	border-bottom: 1px solid #f6f6f6;
 	margin-bottom: 0.1rem;
 }
+.kinds ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+.kinds ul li{
+	width: 25%;
+	padding-left: 0.17rem;
+	
+}
+.kinds ul li img{
+	width: 0.4rem;
+	height: 0.4rem;
+	margin-top: 0.07rem;
+}
+.kinds ul li p{
+	color: #323232;
+	font-size: 0.06rem;
+	width: 0.4rem;
+	text-align: center;
+	padding-top: 0.05rem;
+}
 .has_area{
 	width: 100%;
-	height: 1.3rem;
-	background: skyblue;
+	height: 1.2rem;
+	background: #fff;
+	margin-bottom: 0.1rem;
+}
+.has_area p{
+	width: 100%;
+	height: 0.2rem;
+	text-align: center;
+	line-height: 0.2rem;
+}
+.has_area .z_area{
+	width: 100%;
+	height: 1rem;
+	display: flex;
+}
+.has_area .has_left{
+	height: 1rem;
+	width: 50%;
+	padding-left: 0.17rem;
+}
+.has_area .has_left img{
+	width: 100%;
+	height: 0.94rem;
+	float: left;
+	border: 1px solid #f5f6f9;
+}
+.has_area .has_right{
+	height: 1rem;
+	width: 50%;
+	margin-left: 0.03rem;
+	
+}
+.has_area .has_right ul li img{
+	width: 100%;
+	height: 0.45rem;
+	border: 1px solid #f5f6f9;
+}
+.has_area .has_right ul li:nth-of-type(1){
+	margin-bottom: 0.03rem;
+}
+
+.constellation{
+	width: 100%;
+	height: 1.62rem;
+	background: #fff;
+	margin-bottom: 0.1rem;
+}
+.constellation .uncle img{
+	width: 100%;
+	height: 0.5rem;
+	padding: 0.06rem;
+}
+.constellation .small_goods{
+	width: 100%;
+	height: 1.12rem;
+	overflow-x: scroll;
+	display: flex;
+}
+.constellation .small_goods ul{
+	height: 1.12rem;
+	flex: 1;
+	padding-right: 0.2rem;
+	padding-left: 0.06rem;
+}
+.constellation .small_goods ul li img{
+	width: 0.54rem;
+	height: 0.54rem;
+	margin-top: 0.03rem;
+}
+.constellation .small_goods ul li p{
+	width: 0.54rem;
+	overflow: hidden;
+    white-space: nowrap;
+    padding-top: 0.1rem;
+    font-size: 0.06rem;
+}
+.constellation .small_goods ul li span{
+	font-size: 0.06rem;
+	color: #ff6640;
+	display: block;
+	padding-top: 0.05rem;
+}
+.canteen_area{
+	width: 100%;
+	height: 1.62rem;
+	background: #fff;
+}
+.canteen_area .mother img{
+	width: 100%;
+	height: 0.5rem;
+	padding: 0.06rem;
+}
+.canteen_area .canteen{
+	width: 100%;
+	height: 1.12rem;
+	overflow-x: scroll;
+	display: flex;
+}
+.canteen_area .canteen ul{
+	height: 1.12rem;
+	flex: 1;
+	padding-right: 0.2rem;
+	padding-left: 0.06rem;
+}
+.canteen_area .canteen ul li img{
+	width: 0.54rem;
+	height: 0.54rem;
+	margin-top: 0.03rem;
+}
+.canteen_area .canteen ul li p{
+	width: 0.54rem;
+	overflow: hidden;
+    white-space: nowrap;
+    padding-top: 0.1rem;
+    font-size: 0.06rem;
+}
+.canteen_area .canteen ul li span{
+	font-size: 0.06rem;
+	color: #ff6640;
+	display: block;
+	padding-top: 0.05rem;
+}
+
+.hot{
+	height: 2rem;
+	background: #ff0;
 }
