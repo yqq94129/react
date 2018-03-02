@@ -1,0 +1,53 @@
+section{
+	background: #ebebeb;
+}
+.films_banner{
+	width: 100%;
+	height: 1.32rem;
+	background: #ff0;
+}
+.movies_list{
+	width: 100%;
+	padding:0 0.02rem 0 0.1rem;
+}
+.movies_list ul{
+	height: 1.51rem;
+	margin-top: 0.12rem;
+	background: #fff;
+}
+.movies_list ul li img{
+	width: 100%;
+	height: 1.2rem;
+	
+}
+.movies_list ul li .movies_mess{
+	width: 100%;
+	height: 0.32rem;
+	display: flex;
+}
+.movies_list ul li .movies_mess .movies_left{
+	width: 50%;
+	height: 0.32rem;
+	padding-left: 0.08rem;
+	
+}
+.movies_list ul li .movies_mess .movies_left h3{
+	font-size: 0.09rem;
+	color: #323232;
+	font-weight: bold;
+}
+.movies_list ul li .movies_mess .movies_left span{
+	font-size: 0.06rem;
+	color: #999;
+}
+.movies_list ul li .movies_mess .movies_right{
+	width: 50%;
+	height: 0.32rem;
+}
+.movies_list ul li .movies_mess .movies_right span{
+	display: block;
+	text-align: right;
+	padding-right: 0.12rem;
+	line-height: 0.32rem;
+	color: #f7836a;
+}

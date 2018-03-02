@@ -20,6 +20,10 @@
   	"/api":{
   		"target":"https://aura.maizuo.com",
   		"changeOrigin": true
+  	},
+  	"/film":{
+  		"target":"https://m.maizuo.com/v4/api",
+  		"changeOrigin": true
   	}
   }
 }

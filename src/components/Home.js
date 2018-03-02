@@ -2,11 +2,12 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Commonheader from '../Common_components/Commonheader';
 import Commonfooter from '../Common_components/Commonfooter';
+import {Link} from 'react-router-dom';
 import { Carousel} from 'antd-mobile';
 import '../style/Home.css';
 export default class Home extends Component {
-	constructor() {
-		super();
+	constructor(props) {
+		super(props);
 		this.state = {
 		    data: [],
 		    kinds: [],
@@ -15,7 +16,10 @@ export default class Home extends Component {
 		    uncle: [],
 		    small_goods: [],
 		    mother:[],
-		    canteen:[]
+		    canteen:[],
+		    shampoo:[],
+		    shampoo_kinds:[],
+		    goods_list:[]
 	    }
 	}
 	componentDidMount() {
@@ -26,11 +30,22 @@ export default class Home extends Component {
 	    		kinds: res.data.data.slice(0,8),
 	    		left_area: res.data.data.slice(12,13),
 	    		right_area: res.data.data.slice(14,16),
-	    		uncle: res.data.data.slice(16,17),
-	    		small_goods: res.data.data[16].products,
+	    		uncle: res.data.data.slice(17,18),
+	    		small_goods: res.data.data[17].products,
 	    		mother: res.data.data.slice(17,18),
-	    		canteen: res.data.data[17].products
+	    		canteen: res.data.data[17].products,
+	    		shampoo: res.data.data.slice(18,19),
+	    		shampoo_kinds:res.data.data[18].products
 	    	})
+	    })
+	    
+	    axios.get("/api/recommend/home?page=1&num=20")
+	    .then((res)=>{
+	    	console.log(res);
+	    	this.setState({
+	    		goods_list: res.data.data.list
+	    	})
+	    	
 	    })
 	    setTimeout(() => {
 	      	axios.get("/api/ad/list")
@@ -54,7 +69,7 @@ export default class Home extends Component {
 					    >
 				          	{this.state.data.map((item,index)=> (
 				            	<img key="index"
-					                src={item.imageSrc}/>
+					                src={item.imageSrc} alt=""/>
 					        ))}
 			        	</Carousel>
 	 				</div>
@@ -64,7 +79,7 @@ export default class Home extends Component {
 	 							this.state.kinds.map(function(item,index){
 	 								return(
 	 									<li key={item.name}>
-	 										<img src={item.imageSrc} />
+	 										<img src={item.imageSrc} alt=""/>
 	 										<p>{item.name}</p>
 	 									</li>
 	 									
@@ -81,7 +96,7 @@ export default class Home extends Component {
 		 						{
 		 							this.state.left_area.map(function(item,index){
 		 								return(
-		 									<img key={item.name} src={item.imageSrc}/>
+		 									<img key={item.name} src={item.imageSrc} alt=""/>
 		 								)
 		 							})
 		 						}
@@ -92,7 +107,7 @@ export default class Home extends Component {
 		 								this.state.right_area.map(function(item,index){
 		 									return(
 		 										<li key={item.name}>
-		 											<img src={item.imageSrc} />
+		 											<img src={item.imageSrc} alt=""/>
 		 										</li>
 		 									)
 		 								})
@@ -105,7 +120,7 @@ export default class Home extends Component {
 	 					<div className="uncle">
 	 						{
 	 							this.state.uncle.map(function(item,index){
-	 								return <img key={item.name} src={item.imageSrc}/>
+	 								return <img key={item.name} src={item.imageSrc} alt=""/>
 	 							})
 	 						}
 	 					</div>
@@ -113,11 +128,11 @@ export default class Home extends Component {
 	 						{
 	 							this.state.small_goods.map(function(item,index){
 	 								return(
-	 									<ul>
+	 									<ul key={item.name}>
 	 										<li>
-	 											<img src={item.image}/>
+	 											<img src={item.image} alt=""/>
 		 										<p>{item.name}</p>
-		 										<span>￥{item.price}</span>
+		 										<span>￥{(item.price/100).toFixed(2)}</span>
 	 										</li>
 	 									</ul>
 	 								)
@@ -129,7 +144,7 @@ export default class Home extends Component {
 	 					<div className="mother">
 	 						{
 	 							this.state.mother.map(function(item,index){
-	 								return <img key={item.name} src={item.imageSrc}/>
+	 								return <img key={item.name} src={item.imageSrc} alt=""/>
 	 							})
 	 						}
 	 					</div>
@@ -137,18 +152,64 @@ export default class Home extends Component {
 	 						{
 	 							this.state.canteen.map(function(item,index){
 	 								return(
-	 									<ul>
+	 									<ul key={item.name}>
 	 										<li>
-	 											<img src={item.image}/>
+	 											<img src={item.image} alt=""/>
 		 										<p>{item.name}</p>
-		 										<span>￥{item.price}</span>
+		 										<span>￥{(item.price/100).toFixed(2)}</span>
 	 										</li>
 	 									</ul>
 	 								)
 	 							})
 	 						}
 	 					</div>
-	 					<div className="hot"></div>
+	 				</div>
+	 				<div className="shampoo_area">
+	 					<div className="shampoo">
+	 						{
+	 							this.state.shampoo.map(function(item,index){
+	 								return <img key={item.name} src={item.imageSrc} alt=""/>
+	 							})
+	 						}
+	 					</div>
+	 					<div className="shampoo_kinds">
+	 						{
+	 							this.state.shampoo_kinds.map(function(item,index){
+	 								return(
+	 									<ul key={item.name}>
+	 										<li>
+	 											<img src={item.image} alt=""/>
+		 										<p>{item.name}</p>
+		 										<span>￥{(item.price/100).toFixed(2)}</span>
+	 										</li>
+	 									</ul>
+	 								)
+	 							})
+	 						}
+	 					</div>
+	 				</div>
+	 				<div className="good_goods">
+	 					<div className="good_goods_title">
+	 						<p>——好货精选——</p>
+	 					</div>
+	 					<div className="good_goods_area">
+	 						{
+	 							this.state.goods_list.map(function(item,index){
+	 								return (
+	 									<ul key={item.masterName}>
+				 							<li>
+				 								<Link to={"/Detail/"+item.defaultSkuId}>
+				 									<img src={item.skuList[0].image} alt=""/>
+				 									<p>{item.masterName}</p>
+				 									<span>￥{(item.skuList[0].price/100).toFixed(2)}</span>
+				 									<i>已售{item.displaySalesCount}</i>
+				 								</Link>
+				 							</li>
+				 						</ul>
+	 								)
+	 							})
+	 						}
+	 					</div>
 	 				</div>
  				</section>
  				<Commonfooter />
