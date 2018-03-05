@@ -4,7 +4,17 @@ section{
 .films_banner{
 	width: 100%;
 	height: 1.32rem;
-	background: #ff0;
+}
+.films_banner ul{
+	width: 100%;
+	height: 1.32rem !important;
+}
+.films_banner Carousel{
+	height: 1.32rem;
+}
+.films_banner img{
+	width: 100%;
+	height: 1.32rem;
 }
 .movies_list{
 	width: 100%;

@@ -1,3 +1,53 @@
+section .banner_list{
+	width: 100%;
+	height: 2.5rem;
+}
+.banner_list ul{
+	width: 100%;
+	height: 2.5rem !important;
+}
+.banner_list ul img{
+	height: 2.5rem;
+}
+.goods_details{
+	width: 100%;
+	height: 0.7rem;
+}
+.goods_details .goods_mess{
+	padding-left: 0.05rem;
+}
+.goods_mess h3{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.goods_mess i{
+	color: #a17575;
+}
+.goods_mess p{
+	color: #ff5000;
+	font-size: 0.11rem;
+	font-weight: bold;
+	
+}
+.goods_mess ul{
+	display: flex;
+}
+.goods_mess ul li{
+	flex: 1;
+	color: #757575;
+}
+.pics_list{
+	width: 100%;
+}
+.pics_list ul li{
+	width: 100%;
+	height: 3.75rem;
+}
+.pics_list ul li img{
+	width: 100%;
+	height: 3.75rem;
+}
 .foot1{
 	width: 100%;
 	height: 0.35rem;

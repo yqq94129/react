@@ -1,10 +1,6 @@
 import React,{Component} from 'react';
 import {NavLink} from 'react-router-dom';
-import Home from '../components/Home';
-import Films from '../components/Films';
-import Myself from '../components/Myself';
-import Detail from '../components/Detail';
-import Cart from '../components/Cart';
+
 import '../style/Commonfooter.css';
 
 export default class Commonfooter extends Component{

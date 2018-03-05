@@ -30,12 +30,12 @@ export default class Home extends Component {
 	    		kinds: res.data.data.slice(0,8),
 	    		left_area: res.data.data.slice(12,13),
 	    		right_area: res.data.data.slice(14,16),
-	    		uncle: res.data.data.slice(17,18),
-	    		small_goods: res.data.data[17].products,
+	    		uncle: res.data.data.slice(16,17),
+	    		small_goods: res.data.data[16].products,
 	    		mother: res.data.data.slice(17,18),
 	    		canteen: res.data.data[17].products,
-	    		shampoo: res.data.data.slice(18,19),
-	    		shampoo_kinds:res.data.data[18].products
+	    		shampoo: res.data.data.slice(17,18),
+	    		shampoo_kinds:res.data.data[17].products
 	    	})
 	    })
 	    
@@ -198,7 +198,7 @@ export default class Home extends Component {
 	 								return (
 	 									<ul key={item.masterName}>
 				 							<li>
-				 								<Link to={"/Detail/"+item.defaultSkuId}>
+				 								<Link to={"/Detail/"+item.id}>
 				 									<img src={item.skuList[0].image} alt=""/>
 				 									<p>{item.masterName}</p>
 				 									<span>￥{(item.skuList[0].price/100).toFixed(2)}</span>
